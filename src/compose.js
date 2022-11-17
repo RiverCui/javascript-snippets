@@ -8,7 +8,7 @@ function compose(...fn) {
   )
 }
 
-// 测试用例
+// Test case
 function fn1(x) {
   return x + 1
 }
