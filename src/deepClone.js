@@ -20,7 +20,7 @@ function deepClone(obj, cache = new WeakMap()) {
     } else {
       result = {}
     }
-    if (cache.has(obj)) { return cache.get(obj) }
+    if (cache.has(obj)) { return cache.get(obj) }  // 解决循环引用问题
     cache.set(obj, result)
     for (let key in obj) {
       if (obj.hasOwnProperty(key)) {  // for...in 循环会遍历原型链，这里不需要拷贝原型链上的属性
